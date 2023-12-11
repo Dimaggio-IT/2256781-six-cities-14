@@ -110,7 +110,7 @@ function ReviewForm({ offerId }: TReviewFormProps): JSX.Element {
       </label>
       <div className="reviews__rating-form form__rating" data-rating={rating}>
         {RATING_STARS.map((title, index) => ({ title, score: ++index }))
-          .toReversed()
+          .reverse()
           .map(({ title, score }) => (
             <Fragment key={score}>
               <input

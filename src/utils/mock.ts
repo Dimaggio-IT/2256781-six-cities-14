@@ -82,7 +82,7 @@ const makeFakeOffer = (): TOffer => ({
 });
 
 const makeFakeOffersPreview = (): TOffersPreview =>
-  Array.from({ length: 12 }, makeFakeOfferPreview);
+  Array.from({ length: 20 }, makeFakeOfferPreview);
 
 const makeFakeNearbyPlacesPreview = (): TOffersPreview =>
   Array.from({ length: 3 }, makeFakeOfferPreview);
@@ -101,8 +101,8 @@ const makeFakePreviewData = (): TReviewData => ({
   comment: lorem.sentence(),
 });
 
-const makeFakeReviews = (): TReviews =>
-  Array.from({ length: 5 }, makeFakeReview);
+const makeFakeReviews = ({ length }: { length: number } = { length: 5 }): TReviews =>
+  Array.from({ length }, makeFakeReview);
 
 const extractActionsTypes = (actions: Action<string>[]) => actions.map(({ type }) => type);
 
@@ -139,7 +139,7 @@ function makeFakeState(initialState?: Partial<TState>) {
     authorizationStatus: AuthorizationStatus.Unknown,
     user: null,
   };
-  const fakeState = {
+  const fakeState: TState = {
     [NameSpace.App]: {
       ...appData
     },

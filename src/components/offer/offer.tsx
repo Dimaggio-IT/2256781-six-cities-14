@@ -11,7 +11,7 @@ import {
   Review,
   StarLine,
 } from '../../components';
-import { memo, useCallback } from 'react';
+import { useCallback } from 'react';
 import cn from 'classnames';
 import { selectIsAuthStatus } from '../../store';
 
@@ -22,8 +22,6 @@ type TOfferProps = {
   reviews: TReviews;
   numberReviews: number;
 };
-
-const BookmarkMemo = memo(Bookmark);
 
 function Offer({
   offer,
@@ -67,7 +65,7 @@ function Offer({
   }, [changeFavoritesMark]);
 
   return (
-    <section className="offer">
+    <section className="offer" data-testid="offer-container">
       <div className="offer__gallery-container container">
         <OfferGallery offer={offer} />
       </div>
@@ -76,8 +74,10 @@ function Offer({
           <Premium isPremium={isPremium} mark={MarkType.Offer} />
 
           <div className="offer__name-wrapper">
-            <h1 className="offer__name">{title}</h1>
-            <BookmarkMemo
+            <h1 className="offer__name" data-testid="offer-title">
+              {title}
+            </h1>
+            <Bookmark
               actionClass={bookmarkClass}
               imageClass={imageBookmarkClassName}
               imageWidth={widthImageBookmark}
@@ -89,7 +89,7 @@ function Offer({
 
           <StarLine rating={rating} type={StarType.Offer} />
 
-          <ul className="offer__features">
+          <ul className="offer__features" data-testid="features-container">
             <li className="offer__feature offer__feature--entire">
               {getStringSuperscript(type)}
             </li>
@@ -101,7 +101,7 @@ function Offer({
             </li>
           </ul>
 
-          <div className="offer__price">
+          <div className="offer__price" data-testid="price-container">
             <b className="offer__price-value">&euro;{price}</b>
             <span className="offer__price-text">&nbsp;night</span>
           </div>
@@ -109,7 +109,9 @@ function Offer({
           <GoodList goods={goods} />
 
           <div className="offer__host">
-            <h2 className="offer__host-title">Meet the host</h2>
+            <h2 className="offer__host-title" data-testid="host-title">
+              Meet the host
+            </h2>
             <div className="offer__host-user user">
               <div
                 className={cn('offer__avatar-wrapper', 'user__avatar-wrapper', {
@@ -122,13 +124,18 @@ function Offer({
                   width={74}
                   height={74}
                   alt="Host avatar"
+                  data-testid="host-image"
                 />
               </div>
-              <span className="offer__user-name">{name}</span>
+              <span className="offer__user-name" data-testid="host-name">
+                {name}
+              </span>
               {isPro && <span className="offer__user-status">Pro</span>}
             </div>
             <div className="offer__description">
-              <p className="offer__text">{description}</p>
+              <p className="offer__text" data-testid="offer-description">
+                {description}
+              </p>
             </div>
           </div>
 

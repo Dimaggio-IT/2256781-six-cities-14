@@ -6,9 +6,15 @@ import MockAdapter from 'axios-mock-adapter';
 import thunk from 'redux-thunk';
 import { MockStore, configureMockStore } from '@jedmao/redux-mock-store';
 import { TState } from '../types';
-import { AppThunkDispatch } from '.';
+import { AppThunkDispatch, makeFakeState } from '.';
 import { Action, Store } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
+
+type ComponentWithMockStore = {
+  withStoreComponent: JSX.Element;
+  mockStore: MockStore;
+  mockAxiosAdapter: MockAdapter;
+};
 
 function withHistory(component: JSX.Element, history?: MemoryHistory) {
   const memoryHistory = history ?? createMemoryHistory();
@@ -19,12 +25,6 @@ function withHistory(component: JSX.Element, history?: MemoryHistory) {
     </HistoryRouter>
   );
 }
-
-type ComponentWithMockStore = {
-  withStoreComponent: JSX.Element;
-  mockStore: MockStore;
-  mockAxiosAdapter: MockAdapter;
-};
 
 function makeMockStoreWithThunkAndState(initialState: Partial<TState> = {}) {
   const axios = createAPI();
@@ -67,9 +67,25 @@ function withStore(
   };
 }
 
+function withStoreAndHistory(
+  component: React.ReactElement,
+  initialState?: Partial<TState>,
+  history?: MemoryHistory
+) {
+  const initialMockStoreState = makeFakeState(initialState);
+  const componentWithHistory = withHistory(component, history);
+  const complexComponent = withStore(
+    componentWithHistory,
+    initialMockStoreState
+  );
+
+  return complexComponent;
+}
+
 export {
   withHistory,
   withStore,
   makeMockStoreWithThunkAndState,
   makeMockStoreWrapperForHook,
+  withStoreAndHistory,
 };

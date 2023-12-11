@@ -3,7 +3,7 @@ import { Premium } from '..';
 import { MarkType } from '../../const';
 
 describe('Component: Premium', () => {
-  it('should render correctly', () => {
+  it('Should render correctly', () => {
     render(<Premium isPremium mark={MarkType.Card} />);
 
     expect(screen.getByText('Premium')).toBeInTheDocument();

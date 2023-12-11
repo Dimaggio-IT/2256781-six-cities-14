@@ -17,7 +17,7 @@ function Review({
   numberReviews,
 }: TReviewProps): JSX.Element {
   return (
-    <section className="offer__reviews reviews">
+    <section className="offer__reviews reviews" data-testid="comments-container">
       <h2 className="reviews__title">
         Reviews &middot;{' '}
         <span className="reviews__amount">{numberReviews}</span>

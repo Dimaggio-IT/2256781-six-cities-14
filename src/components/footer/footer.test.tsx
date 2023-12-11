@@ -8,7 +8,7 @@ import { Footer } from '..';
 const history = createMemoryHistory();
 
 describe('Component: footer', () => {
-  it('should render correctly', () => {
+  it('Should render correctly', () => {
     render(
       <Provider store={store}>
         <HistoryRouter history={history}>

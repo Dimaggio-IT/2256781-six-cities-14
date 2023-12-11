@@ -1,4 +1,4 @@
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 
 function getStringSuperscript(str: string): string {
   return str.length > 0 ? str.charAt(0).toUpperCase() + str.slice(1) : '';

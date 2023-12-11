@@ -6,7 +6,7 @@ import { createMemoryHistory } from 'history';
 const history = createMemoryHistory();
 
 describe('Component: Logo', () => {
-  it('should render correctly', () => {
+  it('Should render correctly', () => {
     const logoWidth = 100;
     const logoHeight = 80;
     const logoLinkTestId = 'header-link';

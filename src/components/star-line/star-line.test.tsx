@@ -4,7 +4,7 @@ import { StarType } from '../../const';
 import { calculateRating } from '../../utils';
 
 describe('Component: StarLine', () => {
-  it('should render correctly', () => {
+  it('Should render correctly', () => {
     const starLineTestId = 'starline-container';
 
     render(<StarLine rating={1} />);
