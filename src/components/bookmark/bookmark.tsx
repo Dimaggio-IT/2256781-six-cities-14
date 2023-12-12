@@ -22,7 +22,12 @@ function Bookmark({
       onClick={() => onMarkChange()}
       data-testid="offer-bookmark"
     >
-      <svg className={imageClass} width={imageWidth} height={imageHeight}>
+      <svg
+        className={imageClass}
+        width={imageWidth}
+        height={imageHeight}
+        data-testid="offer-bookmark-icon"
+      >
         <use xlinkHref="#icon-bookmark"></use>
       </svg>
       <span className="visually-hidden">{hiddenDescription}</span>
