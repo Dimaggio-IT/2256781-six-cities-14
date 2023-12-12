@@ -29,7 +29,7 @@ describe('User-process async actions]:', () => {
   });
 
   describe('getAsyncAuth', () => {
-    it('should dispatch getAsyncAuth.pending, getAsyncAuth.fulfilled when server response 200', async () => {
+    it('Should dispatch getAsyncAuth.pending, getAsyncAuth.fulfilled when server response 200', async () => {
       const fakeResponse = { token: 'secret' };
       mockAxiosAdapter.onGet(APIRoute.Login).reply(200, fakeResponse);
       const expectedActions = [
@@ -43,7 +43,7 @@ describe('User-process async actions]:', () => {
       expect(actions).toEqual(expectedActions);
     });
 
-    it('should dispatch getAsyncAuth.pending, getAsyncAuth.rejected when server response 401', async () => {
+    it('Should dispatch getAsyncAuth.pending, getAsyncAuth.rejected when server response 401', async () => {
       const fakeResponse = {
         errorType: 'COMMON_ERROR',
         message: 'Access deny.'
@@ -62,7 +62,7 @@ describe('User-process async actions]:', () => {
   });
 
   describe('postAsyncAuth', () => {
-    it('should dispatch postAsyncAuth.pending, postAsyncAuth.fulfilled when server response 200', async () => {
+    it('Should dispatch postAsyncAuth.pending, postAsyncAuth.fulfilled when server response 200', async () => {
       const fakeUser = makeFakeUserData();
       const fakeRegData = makeFakeUserRegistrationData();
       mockAxiosAdapter.onPost(APIRoute.Login).reply(200, fakeUser);
@@ -80,7 +80,7 @@ describe('User-process async actions]:', () => {
       expect(mockSaveToken).toBeCalledWith(fakeUser.token);
     });
 
-    it('should dispatch postAsyncAuth.pending, postAsyncAuth.rejected when server response 400', async () => {
+    it('Should dispatch postAsyncAuth.pending, postAsyncAuth.rejected when server response 400', async () => {
       const fakeRegData = makeFakeUserRegistrationData();
       const fakeResponse = {
         errorType: 'VALIDATION_ERROR',
@@ -108,7 +108,7 @@ describe('User-process async actions]:', () => {
   });
 
   describe('deleteAsyncAuth', () => {
-    it('should dispatch deleteAsyncAuth.pending, deleteAsyncAuth.fulfilled when server response 204', async () => {
+    it('Should dispatch deleteAsyncAuth.pending, deleteAsyncAuth.fulfilled when server response 204', async () => {
       mockAxiosAdapter.onDelete(APIRoute.Logout).reply(204);
       const mockDropToken = vi.spyOn(tokenStorage, 'dropToken');
       const expectedActions = [

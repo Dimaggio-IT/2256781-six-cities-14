@@ -33,7 +33,7 @@ function OfferBoard({
   return (
     <section className="cities__places places">
       <h2 className="visually-hidden">Places</h2>
-      <b className="places__found">
+      <b className="places__found" data-testid="place-found">
         {offerCount} place{offerCount > 1 && 's'} to stay in {cityName}
       </b>
       <Sorting

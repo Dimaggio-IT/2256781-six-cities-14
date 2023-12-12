@@ -3,7 +3,7 @@ import { getActiveCityByDefault } from '../../utils';
 import { TAppData, appData, assignCity, assignSorting } from './app-data';
 
 describe('Reducer: appData', () => {
-  it('should return initial state with empty action', () => {
+  it('Should return initial state with empty action', () => {
     const emptyAction = { type: '' };
     const initialState: TAppData = {
       city: getActiveCityByDefault(),
@@ -17,7 +17,7 @@ describe('Reducer: appData', () => {
     expect(appData.reducer(initialState, emptyAction)).toEqual(expectedState);
   });
 
-  it('should return default initial state with empty action and undefined state', () => {
+  it('Should return default initial state with empty action and undefined state', () => {
     const emptyAction = { type: '' };
     const expectedState: TAppData = {
       city: getActiveCityByDefault(),
@@ -27,7 +27,7 @@ describe('Reducer: appData', () => {
     expect(appData.reducer(undefined, emptyAction)).toEqual(expectedState);
   });
 
-  it('should change city with "assignCity" action', () => {
+  it('Should change city with "assignCity" action', () => {
     const initialState: TAppData = {
       city: 'Paris',
       sorting: 'POPULAR',
@@ -39,7 +39,7 @@ describe('Reducer: appData', () => {
     expect(result.city).toBe(expectedCity);
   });
 
-  it('should change sorting with "assignSorting" action', () => {
+  it('Should change sorting with "assignSorting" action', () => {
     const initialState: TAppData = {
       city: 'Paris',
       sorting: 'POPULAR',

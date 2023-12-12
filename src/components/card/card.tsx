@@ -56,6 +56,7 @@ function Card({
       className={cardClassName}
       onMouseEnter={() => onCardHover?.(offer)}
       onMouseLeave={() => onCardLeave?.()}
+      data-testid="card-container"
     >
       <div className="cities__image-wrapper place-card__image-wrapper">
         <Link to={path}>

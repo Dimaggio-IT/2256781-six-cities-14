@@ -23,7 +23,7 @@ describe('Favorite async actions', () => {
 
   describe('getAsyncFavorites', () => {
 
-    it('should dispatch getAsyncFavorites.pending, getAsyncFavorites.fulfilled when server response 200', async () => {
+    it('Should dispatch getAsyncFavorites.pending, getAsyncFavorites.fulfilled when server response 200', async () => {
       const fakeOffers = makeFakeOffersPreview();
       mockAxiosAdapter.onGet(APIRoute.Favorite).reply(200, fakeOffers);
 
@@ -42,7 +42,7 @@ describe('Favorite async actions', () => {
         .toEqual(fakeOffers);
     });
 
-    it('should dispatch getAsyncFavorites.pending, getAsyncFavorites.rejected when server response 400', async () => {
+    it('Should dispatch getAsyncFavorites.pending, getAsyncFavorites.rejected when server response 400', async () => {
       mockAxiosAdapter.onGet(APIRoute.Favorite).reply(400, []);
 
       await store.dispatch(getAsyncFavorites());
@@ -59,7 +59,7 @@ describe('Favorite async actions', () => {
   });
 
   describe('postAsyncFavorite', () => {
-    it('should dispatch postAsyncFavorite.pending, postAsyncFavorite.fulfilled when server response 200', async () => {
+    it('Should dispatch postAsyncFavorite.pending, postAsyncFavorite.fulfilled when server response 200', async () => {
       const fakeOffer = makeFakeOffer();
       const newStatusForTheRequest = Number(!fakeOffer.isFavorite);
       const newFakeOffer: TOffer = { ...fakeOffer, isFavorite: !fakeOffer.isFavorite };
@@ -85,7 +85,7 @@ describe('Favorite async actions', () => {
         .toEqual(newFakeOffer);
     });
 
-    it('should dispatch postAsyncFavorite.pending, postAsyncFavorite.rejected when server response 400', async () => {
+    it('Should dispatch postAsyncFavorite.pending, postAsyncFavorite.rejected when server response 400', async () => {
       const fakeOffer = makeFakeOffer();
       const newStatusForTheRequest = Number(!fakeOffer.isFavorite);
       const offerId = fakeOffer.id;

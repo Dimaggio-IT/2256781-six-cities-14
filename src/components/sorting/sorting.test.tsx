@@ -6,7 +6,7 @@ import { Sorting } from '..';
 import { TSorting } from '../../types';
 
 describe('Component <Sorting />:', () => {
-  it('should render correct', () => {
+  it('Should render correct', () => {
     const currentSorting: TSorting = 'POPULAR';
     const onSortChange = vi.fn();
     const expectedText = 'Top rated first';
@@ -20,7 +20,7 @@ describe('Component <Sorting />:', () => {
     expect(screen.getByText(expectedText)).toBeInTheDocument();
   });
 
-  it('should called with the sorting value "TOP" when the value in the drop-down list is clicked', async () => {
+  it('Should called with the sorting value "TOP" when the value in the drop-down list is clicked', async () => {
     const user = userEvent.setup();
     const currentSorting: TSorting = 'POPULAR';
     const sortingElementText = 'Top rated first';

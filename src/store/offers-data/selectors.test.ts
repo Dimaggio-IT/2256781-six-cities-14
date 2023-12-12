@@ -18,7 +18,7 @@ describe('Reducer: offers selectors', () => {
   });
 
   describe('selector: selectOffers', () => {
-    it('should return "offers" from state', () => {
+    it('Should return "offers" from state', () => {
       const result = selectOffers(state);
 
       expect(result).toEqual(fakeOffers);
@@ -26,7 +26,7 @@ describe('Reducer: offers selectors', () => {
   });
 
   describe('selector: selectIsOffersLoading', () => {
-    it('should return "isOffersLoading" from state', () => {
+    it('Should return "isOffersLoading" from state', () => {
       const result = selectIsOffersLoading(state);
 
       expect(result).toEqual(false);
@@ -34,7 +34,7 @@ describe('Reducer: offers selectors', () => {
   });
 
   describe('selector: selectIsEmptyOffers', () => {
-    it('should return empty or non-empty offers in the state', () => {
+    it('Should return empty or non-empty offers in the state', () => {
       const result = selectIsEmptyOffers(state);
 
       expect(result).toEqual(false);

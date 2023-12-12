@@ -31,7 +31,7 @@ describe('Offer async actions', () => {
 
   describe('getAsyncOffer', () => {
 
-    it('should dispatch getAsyncOffer.pending, getAsyncOffer.fulfilled when server response 200', async () => {
+    it('Should dispatch getAsyncOffer.pending, getAsyncOffer.fulfilled when server response 200', async () => {
       const fakeOffer = makeFakeOffer();
       const offerId = fakeOffer.id;
       const query = replaceURI(APIRoute.Offer, offerId);
@@ -52,7 +52,7 @@ describe('Offer async actions', () => {
         .toEqual(fakeOffer);
     });
 
-    it('should dispatch getAsyncOffer.pending, getAsyncOffer.rejected when server response 400', async () => {
+    it('Should dispatch getAsyncOffer.pending, getAsyncOffer.rejected when server response 400', async () => {
       const fakeOffer = makeFakeOffer();
       const offerId = fakeOffer.id;
       const query = replaceURI(APIRoute.Offer, offerId);
@@ -75,7 +75,7 @@ describe('Offer async actions', () => {
   });
 
   describe('getAsyncNearbyPlaces', () => {
-    it('should dispatch getAsyncNearbyPlaces.pending getAsyncNearbyPlaces.fulfilled when server response 200', async () => {
+    it('Should dispatch getAsyncNearbyPlaces.pending getAsyncNearbyPlaces.fulfilled when server response 200', async () => {
       const offerId = '123321';
       const fakeNearbyPlaces = makeFakeNearbyPlacesPreview();
       const query = replaceURI(APIRoute.Nearby, offerId);
@@ -98,7 +98,7 @@ describe('Offer async actions', () => {
   });
 
   describe('getAsyncReviews', () => {
-    it('should dispatch getAsyncReviews.pending, getAsyncReviews.fulfilled when server response 200', async () => {
+    it('Should dispatch getAsyncReviews.pending, getAsyncReviews.fulfilled when server response 200', async () => {
       const fakeOffer = makeFakeOffer();
       const fakeOfferId = fakeOffer.id;
       const fakeReviews = makeFakeReviews();
@@ -122,7 +122,7 @@ describe('Offer async actions', () => {
   });
 
   describe('postAsyncReview', () => {
-    it('should dispatch postAsyncReview.pending, postAsyncReview.fulfilled when server response 200', async () => {
+    it('Should dispatch postAsyncReview.pending, postAsyncReview.fulfilled when server response 200', async () => {
       const fakeReview = makeFakeReview();
       const fakeReviewOfferId = fakeReview.id;
       const query = replaceURI(APIRoute.Review, fakeReviewOfferId);
@@ -145,7 +145,7 @@ describe('Offer async actions', () => {
         .toEqual(fakeReview);
     });
 
-    it('should dispatch postAsyncReview.pending, postAsyncReview.rejected when server response 400', async () => {
+    it('Should dispatch postAsyncReview.pending, postAsyncReview.rejected when server response 400', async () => {
 
       const fakeReview = makeFakeReview();
       const fakeReviewOfferId = fakeReview.id;

@@ -25,7 +25,7 @@ describe('Component: Logo', () => {
     expect(image).toBeInTheDocument();
   });
 
-  it('should render image with specified width and height values', () => {
+  it('Should render image with specified width and height values', () => {
     const logoWidth = 100;
     const logoHeight = 80;
     const imageTestId = 'logo-img';

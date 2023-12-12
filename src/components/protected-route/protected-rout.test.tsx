@@ -6,7 +6,7 @@ import { ProtectedRoute } from '..';
 import { render, screen } from '@testing-library/react';
 import { makeFakeState } from '../../utils';
 
-describe('Component: protected-rout', () => {
+describe('Component: <ProtectedRoute />', () => {
   let mockHistory: MemoryHistory;
 
   beforeAll(() => {
@@ -17,7 +17,7 @@ describe('Component: protected-rout', () => {
     mockHistory.push(AppRoute.Favorites);
   });
 
-  it('should render component with the text "public route", when user not authorized', () => {
+  it('Should render component with the text "public route", when user not authorized', () => {
     const expectedText = 'public route';
     const notExpectedText = 'private route';
     const initialFakeStore = makeFakeState({
@@ -54,7 +54,7 @@ describe('Component: protected-rout', () => {
     expect(screen.queryByText(notExpectedText)).not.toBeInTheDocument();
   });
 
-  it('should render component with the text "private route", when user authorized', () => {
+  it('Should render component with the text "private route", when user authorized', () => {
     const expectedText = 'private route';
     const notExpectedText = 'public route';
     const initialFakeStore = makeFakeState({

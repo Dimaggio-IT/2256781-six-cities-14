@@ -3,7 +3,7 @@ import { StarLine } from '..';
 import { StarType } from '../../const';
 import { calculateRating } from '../../utils';
 
-describe('Component: StarLine', () => {
+describe('Component: <StarLine />', () => {
   it('Should render correctly', () => {
     const starLineTestId = 'starline-container';
 
@@ -14,7 +14,7 @@ describe('Component: StarLine', () => {
     expect(starLineContainer).toBeInTheDocument();
   });
 
-  it('should render component with specified class "Card" value', () => {
+  it('Should render component with specified class "Card" value', () => {
     const starLineType = StarType.Card;
     const starLineContainerClassName = `${starLineType}__rating rating`;
     const starRatingClassName = `${starLineType}__stars rating__stars`;
@@ -42,7 +42,7 @@ describe('Component: StarLine', () => {
     expect(offerRatingSpan).toBeNull();
   });
 
-  it('should render component with specified class "Review" value', () => {
+  it('Should render component with specified class "Review" value', () => {
     const starLineType = StarType.Review;
     const starLineContainerClassName = `${starLineType}__rating rating`;
     const starRatingClassName = `${starLineType}__stars rating__stars`;
@@ -70,7 +70,7 @@ describe('Component: StarLine', () => {
     expect(offerRatingSpan).toBeNull();
   });
 
-  it('should render component with specified class "Offer" value', () => {
+  it('Should render component with specified class "Offer" value', () => {
     const starLineType = StarType.Offer;
     const starLineContainerClassName = `${starLineType}__rating rating`;
     const starRatingClassName = `${starLineType}__stars rating__stars`;

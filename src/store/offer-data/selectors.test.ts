@@ -23,7 +23,7 @@ describe('Reducer: offer selectors', () => {
   });
 
   describe('selector: selectOffer', () => {
-    it('should return "offer" from state', () => {
+    it('Should return "offer" from state', () => {
       const result = selectOffer(state);
 
       expect(result).toEqual(fakeOffer);
@@ -31,7 +31,7 @@ describe('Reducer: offer selectors', () => {
   });
 
   describe('selector: selectNearbyPlaces', () => {
-    it('should return "nearbyPlaces" from state', () => {
+    it('Should return "nearbyPlaces" from state', () => {
       const result = selectNearbyPlaces(state);
 
       expect(result).toEqual(fakeNearbyPlaces);
@@ -39,7 +39,7 @@ describe('Reducer: offer selectors', () => {
   });
 
   describe('selector: selectNumberReviews', () => {
-    it('should return count reviews from state', () => {
+    it('Should return count reviews from state', () => {
       const result = selectNumberReviews(state);
 
       expect(result).toEqual(fakeReviews.length);
@@ -47,7 +47,7 @@ describe('Reducer: offer selectors', () => {
   });
 
   describe('selector: selectReviewRequestStatus', () => {
-    it('should return review request status from state', () => {
+    it('Should return review request status from state', () => {
       const result = selectReviewRequestStatus(state);
 
       expect(result).toEqual(RequestStatus.Success);

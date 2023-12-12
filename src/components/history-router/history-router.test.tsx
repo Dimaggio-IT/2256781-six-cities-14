@@ -3,7 +3,7 @@ import { createMemoryHistory } from 'history';
 import { HistoryRouter } from './history-router';
 
 describe('Component <HistoryRouter />', () => {
-  it('should render correct', () => {
+  it('Should render correct', () => {
     const route = '/';
     const expectedText = /Test HistoryRouter/i;
     const testComponent = <div>Test HistoryRouter</div>;
@@ -15,6 +15,7 @@ describe('Component <HistoryRouter />', () => {
     );
 
     render(component);
+
     const expectElem = screen.getByText(expectedText);
 
     expect(expectElem).toBeInTheDocument();

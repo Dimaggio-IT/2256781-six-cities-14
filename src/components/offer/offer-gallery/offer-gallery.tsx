@@ -10,11 +10,11 @@ type TOfferGalleryProps = {
 function OfferGallery({ offer }: TOfferGalleryProps): JSX.Element {
   const { title, images } = offer;
   return (
-    <div className="offer__gallery">
+    <div className="offer__gallery" data-testid="gallery-container">
       {images
         .filter((_, index) => index < OFFER_GALLERY_QUANTITY)
         .map((image) => (
-          <div className="offer__image-wrapper" key={image}>
+          <div className="offer__image-wrapper" key={image} data-testid="offer-image-container">
             <LazyLoadImage
               className="offer__image"
               src={image}

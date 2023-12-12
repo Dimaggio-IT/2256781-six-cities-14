@@ -19,19 +19,19 @@ describe('Reducer: offer', () => {
     state = { ...initialState };
   });
 
-  it('should return initial state with empty action', () => {
+  it('Should return initial state with empty action', () => {
     const emptyAction = { type: '' };
 
     expect(offerData.reducer(initialState, emptyAction)).toEqual(initialState);
   });
 
-  it('should return default initial state with empty action and undefined state', () => {
+  it('Should return default initial state with empty action and undefined state', () => {
     const emptyAction = { type: '' };
 
     expect(offerData.reducer(undefined, emptyAction)).toEqual(initialState);
   });
 
-  it('should return the changed state with assignEmptyOffer action', () => {
+  it('Should return the changed state with assignEmptyOffer action', () => {
     const changedState: TOfferData = {
       ...initialState,
       offer: makeFakeOffer()
@@ -40,7 +40,7 @@ describe('Reducer: offer', () => {
     expect(offerData.reducer(changedState, assignEmptyOffer())).toEqual(initialState);
   });
 
-  it('should return the changed state with updateOffer action', () => {
+  it('Should return the changed state with updateOffer action', () => {
     const fakeOffer = makeFakeOffer();
     const fakeOfferPreview = makeFakeOfferPreview();
     const expectedFakeOffer: TOffer = {
@@ -59,7 +59,7 @@ describe('Reducer: offer', () => {
     expect(offerData.reducer(changedState, updateOffer(fakeOfferPreview))).toEqual(expectedState);
   });
 
-  it('should return the changed state with updateNearbyPlaces action', () => {
+  it('Should return the changed state with updateNearbyPlaces action', () => {
     const fakeNearbyPlaces = makeFakeNearbyPlacesPreview();
     const fakeOfferPreview = makeFakeOfferPreview();
     const newId = '123321';
@@ -74,7 +74,7 @@ describe('Reducer: offer', () => {
     expect(offerData.reducer(changedState, updateNearbyPlaces(fakeOfferPreview)).nearbyPlaces[0].isFavorite).toEqual(fakeOfferPreview.isFavorite);
   });
 
-  it('should return the changed state with assignReviewRequestStatusByDefault action', () => {
+  it('Should return the changed state with assignReviewRequestStatusByDefault action', () => {
     const changedState: TOfferData = {
       ...initialState,
       reviewRequestStatus: RequestStatus.Error,
