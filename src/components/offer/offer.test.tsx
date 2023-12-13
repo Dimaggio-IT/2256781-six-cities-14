@@ -22,7 +22,7 @@ describe('Component <Offer />:', () => {
       RATING: 'starline-container',
       FEATURES: 'features-container',
       PRICE: 'price-container',
-      INSIDE: 'inside-container',
+      INSIDE: 'goods-container',
       HOST: 'host-title',
       HOST_IMG: 'host-image',
       HOST_NAME: 'host-name',

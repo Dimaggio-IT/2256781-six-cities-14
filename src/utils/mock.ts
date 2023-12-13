@@ -95,6 +95,22 @@ const makeFakeReview = (): TReview => ({
   date: String(date.recent()),
 });
 
+const makeFakeGoods = (): string[] => ([
+  'Heating',
+  'Coffee machine',
+  'Cable TV',
+  'Fridge',
+  'Washer',
+  'Kitchen',
+  'Wi-Fi',
+  'Laptop friendly workspace',
+  'Baby seat',
+  'Dishwasher',
+  'Washer',
+  'Towels',
+  'Breakfast',
+]);
+
 const makeFakePreviewData = (): TReviewData => ({
   id: datatype.string(),
   rating: datatype.number({ min: 1, max: 5, precision: 0.1 }),
@@ -161,4 +177,4 @@ function makeFakeState(initialState?: Partial<TState>) {
   return fakeState;
 }
 
-export { makeFakeReviews, makeFakeNearbyPlacesPreview, makeFakeOffersPreview, makeFakeUserData, makeFakeOffer, extractActionsTypes, type AppThunkDispatch, makeFakeOfferPreview, makeFakeReview, makeFakePreviewData, makeFakeUserRegistrationData, makeFakeState };
+export { makeFakeReviews, makeFakeNearbyPlacesPreview, makeFakeOffersPreview, makeFakeUserData, makeFakeOffer, extractActionsTypes, type AppThunkDispatch, makeFakeOfferPreview, makeFakeReview, makeFakePreviewData, makeFakeUserRegistrationData, makeFakeState, makeFakeGoods };
