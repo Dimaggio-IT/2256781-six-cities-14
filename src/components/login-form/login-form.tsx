@@ -69,6 +69,7 @@ function LoginForm(): JSX.Element {
             name="email"
             placeholder="Email"
             title="Email, for example test@test.com"
+            data-testid="email-element"
             required
           />
         </div>
@@ -82,6 +83,7 @@ function LoginForm(): JSX.Element {
             name="password"
             placeholder="Password"
             title="The password must contain at least one digit or letter"
+            data-testid="password-element"
             required
           />
         </div>
