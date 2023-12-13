@@ -81,8 +81,8 @@ const makeFakeOffer = (): TOffer => ({
   description: commerce.productDescription()
 });
 
-const makeFakeOffersPreview = (): TOffersPreview =>
-  Array.from({ length: 20 }, makeFakeOfferPreview);
+const makeFakeOffersPreview = ({ length }: { length: number } = { length: 20 }): TOffersPreview =>
+  Array.from({ length }, makeFakeOfferPreview);
 
 const makeFakeNearbyPlacesPreview = (): TOffersPreview =>
   Array.from({ length: 3 }, makeFakeOfferPreview);
