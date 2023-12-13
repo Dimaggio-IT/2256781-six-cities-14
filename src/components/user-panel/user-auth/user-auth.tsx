@@ -21,7 +21,12 @@ function UserAuth({ onSignOut, quantityFavorite, userData }: TUserAuthProps) {
             <span className="header__user-name user__name">
               {userData?.email}
             </span>
-            <span className="header__favorite-count" data-testid="count-favorites">{quantityFavorite}</span>
+            <span
+              className="header__favorite-count"
+              data-testid="count-favorites"
+            >
+              {quantityFavorite}
+            </span>
           </Link>
         </li>
         <li className="header__nav-item">
@@ -32,7 +37,9 @@ function UserAuth({ onSignOut, quantityFavorite, userData }: TUserAuthProps) {
               onSignOut();
             }}
           >
-            <span className="header__signout">Sign out</span>
+            <span className="header__signout" data-testid="login-container">
+              Sign out
+            </span>
           </a>
         </li>
       </ul>
