@@ -17,7 +17,7 @@ describe('Component: <ProtectedRoute />', () => {
     mockHistory.push(AppRoute.Favorites);
   });
 
-  it('Should render component with the text "public route", when user not authorized', () => {
+  it('should render component with the text "public route", when user not authorized', () => {
     const expectedText = 'public route';
     const notExpectedText = 'private route';
     const initialFakeStore = makeFakeState({
@@ -54,7 +54,7 @@ describe('Component: <ProtectedRoute />', () => {
     expect(screen.queryByText(notExpectedText)).not.toBeInTheDocument();
   });
 
-  it('Should render component with the text "private route", when user authorized', () => {
+  it('should render component with the text "private route", when user authorized', () => {
     const expectedText = 'private route';
     const notExpectedText = 'public route';
     const initialFakeStore = makeFakeState({

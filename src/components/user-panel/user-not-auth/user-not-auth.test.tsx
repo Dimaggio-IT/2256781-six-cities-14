@@ -3,7 +3,7 @@ import { withHistory } from '../../../utils/mock-component';
 import { UserNotAuth } from './user-not-auth';
 
 describe('Component <UserNotAuth />:', () => {
-  it('Should render correct', () => {
+  it('should render correct', () => {
     const loginContainerId = 'login-container';
     const expectedLoginContainerText = 'Sign in';
     const component = withHistory(<UserNotAuth />);

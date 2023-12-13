@@ -22,7 +22,7 @@ describe('Component: <App />', () => {
   });
 
   describe('route "/"', () => {
-    it('Should render the <Spinner /> when the offers have not loaded yet', () => {
+    it('should render the <Spinner /> when the offers have not loaded yet', () => {
       const { withStoreComponent } = withStore(
         withHistoryApp,
         makeFakeState({
@@ -40,7 +40,7 @@ describe('Component: <App />', () => {
       expect(screen.getByTestId(spinnerId)).toBeInTheDocument();
     });
 
-    it('Should not render the <Spinner /> when the offers have already loaded', () => {
+    it('should not render the <Spinner /> when the offers have already loaded', () => {
       const { withStoreComponent } = withStore(
         withHistoryApp,
         makeFakeState({
@@ -58,7 +58,7 @@ describe('Component: <App />', () => {
       expect(screen.queryByTestId(spinnerId)).not.toBeInTheDocument();
     });
 
-    it('Should render <MainPage /> when the user navigates to "/"', () => {
+    it('should render <MainPage /> when the user navigates to "/"', () => {
       const fakeOffers = makeFakeOffersPreview();
       fakeOffers[0].city.name = 'Paris';
       const fakeStore = makeFakeState({
@@ -82,7 +82,7 @@ describe('Component: <App />', () => {
       expect(screen.getByTestId(mapContainerId)).toBeInTheDocument();
     });
 
-    it('Should render <NotFoundPlaces /> when the list of offers that we received from the server is empty', () => {
+    it('should render <NotFoundPlaces /> when the list of offers that we received from the server is empty', () => {
       const fakeStore = makeFakeState({
         [NameSpace.Offers]: {
           offers: [],
@@ -106,7 +106,7 @@ describe('Component: <App />', () => {
   });
 
   describe('route "/favorites"', () => {
-    it('Should render <FavoriteEmpty /> when the user is logged in and has no favorites', () => {
+    it('should render <FavoriteEmpty /> when the user is logged in and has no favorites', () => {
       const { withStoreComponent } = withStore(
         withHistoryApp,
         makeFakeState({
@@ -129,7 +129,7 @@ describe('Component: <App />', () => {
       expect(screen.getByText(expectedDescription)).toBeInTheDocument();
     });
 
-    it('Should render <Favorite /> when the user is logged in and has favorites', () => {
+    it('should render <Favorite /> when the user is logged in and has favorites', () => {
       const fakeOfferOne = makeFakeOfferPreview();
       const fakeOfferTwo = makeFakeOfferPreview();
       const { withStoreComponent } = withStore(
@@ -170,7 +170,7 @@ describe('Component: <App />', () => {
   });
 
   describe('route "*"', () => {
-    it('Should render <NotFoundPage /> when the user navigates to a non-existent page', () => {
+    it('should render <NotFoundPage /> when the user navigates to a non-existent page', () => {
       const { withStoreComponent } = withStore(withHistoryApp, makeFakeState());
       const expectedTitle = '404. Page not found';
 

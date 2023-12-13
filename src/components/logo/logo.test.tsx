@@ -6,7 +6,7 @@ import { createMemoryHistory } from 'history';
 const history = createMemoryHistory();
 
 describe('Component: Logo', () => {
-  it('Should render correctly', () => {
+  it('should render correctly', () => {
     const logoWidth = 100;
     const logoHeight = 80;
     const logoLinkTestId = 'header-link';
@@ -25,7 +25,7 @@ describe('Component: Logo', () => {
     expect(image).toBeInTheDocument();
   });
 
-  it('Should render image with specified width and height values', () => {
+  it('should render image with specified width and height values', () => {
     const logoWidth = 100;
     const logoHeight = 80;
     const imageTestId = 'logo-img';

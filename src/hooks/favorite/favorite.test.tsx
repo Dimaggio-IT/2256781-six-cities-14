@@ -32,8 +32,8 @@ type TWithProviderWrapperProps = {
 
 const withProviderWrapperWithInitialState =
   (initialState: Partial<TState>) =>
-    ({ children }: TWithProviderWrapperProps) =>
-      withStore(children, makeFakeState(initialState)).withStoreComponent;
+  ({ children }: TWithProviderWrapperProps) =>
+    withStore(children, makeFakeState(initialState)).withStoreComponent;
 
 describe('Hook: useFavoritesMark', () => {
   const initialMockHistory = createMemoryHistory();
@@ -44,7 +44,7 @@ describe('Hook: useFavoritesMark', () => {
     initialMockHistory.push('/anything');
   });
 
-  it('Should return "changeFavoritesMark" function', () => {
+  it('should return "changeFavoritesMark" function', () => {
     const fakeOffer = makeFakeOfferPreview();
     const id = fakeOffer.id;
     const flagStatus = false;
@@ -63,7 +63,7 @@ describe('Hook: useFavoritesMark', () => {
     expect(typeof result.current).toBe('function');
   });
 
-  it('Should redirect to route "/login" when the user is not logged in', () => {
+  it('should redirect to route "/login" when the user is not logged in', () => {
     const fakeOffer = makeFakeOfferPreview();
     const id = fakeOffer.id;
     const flagStatus = false;
@@ -86,7 +86,7 @@ describe('Hook: useFavoritesMark', () => {
     expect(initialMockHistory.location.pathname).toBe(AppRoute.Login);
   });
 
-  it('Should change "isFavorite" status and not redirect to route "/login" when the user has already logged in', () => {
+  it('should change "isFavorite" status and not redirect to route "/login" when the user has already logged in', () => {
     const fakeOffersPreview = makeFakeOffersPreview();
     const fakeNearbyPlacesPreview = makeFakeNearbyPlacesPreview();
     const fakeOffer = makeFakeOffer();

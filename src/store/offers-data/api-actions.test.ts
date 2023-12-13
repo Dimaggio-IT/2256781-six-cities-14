@@ -21,7 +21,7 @@ describe('Offers async actions', () => {
   });
 
   describe('getAsyncOffers', () => {
-    it('Should dispatch getAsyncOffers.pending, getAsyncOffers.fulfilled when server response 200', async () => {
+    it('should dispatch getAsyncOffers.pending, getAsyncOffers.fulfilled when server response 200', async () => {
       const fakeOffers = makeFakeOffersPreview();
       mockAxiosAdapter.onGet(APIRoute.Offers).reply(200, fakeOffers);
 
@@ -40,7 +40,7 @@ describe('Offers async actions', () => {
         .toEqual(fakeOffers);
     });
 
-    it('Should dispatch getAsyncOffers.pending, getAsyncOffers.rejected when server response 400', async () => {
+    it('should dispatch getAsyncOffers.pending, getAsyncOffers.rejected when server response 400', async () => {
       mockAxiosAdapter.onGet(APIRoute.Offers).reply(400, []);
 
       await store.dispatch(getAsyncOffers());

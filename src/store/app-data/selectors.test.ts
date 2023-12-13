@@ -13,13 +13,13 @@ describe('Reducer: appData selectors', () => {
     [NameSpace.App]: { ...initialState },
   };
 
-  it('Should return city from state', () => {
+  it('should return city from state', () => {
     const { city } = state[NameSpace.App];
     const result = selectCity(state);
     expect(result).toBe(city);
   });
 
-  it('Should return step number from state', () => {
+  it('should return step number from state', () => {
     const { sorting } = state[NameSpace.App];
     const result = selectSorting(state);
     expect(result).toBe(sorting);

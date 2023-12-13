@@ -2,7 +2,7 @@ import { render, fireEvent } from '@testing-library/react';
 import { Bookmark } from '..';
 
 describe('Component: <Bookmark />', () => {
-  it('Should renders correctly with default props', () => {
+  it('should renders correctly with default props', () => {
     const { getByText, getByTestId } = render(
       <Bookmark
         actionClass="action-class"

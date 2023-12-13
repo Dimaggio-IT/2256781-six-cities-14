@@ -18,7 +18,7 @@ describe('Reducer: user-process selectors', () => {
   });
 
   describe('selector: selectAuthStatus', () => {
-    it('Should return auth. status from state', () => {
+    it('should return auth. status from state', () => {
       const result = selectAuthStatus(state);
 
       expect(result).toEqual(AuthorizationStatus.NoAuth);
@@ -26,7 +26,7 @@ describe('Reducer: user-process selectors', () => {
   });
 
   describe('selector: selectIsAuthStatus', () => {
-    it('Should return true or false auth. status in the state', () => {
+    it('should return true or false auth. status in the state', () => {
       const result = selectIsAuthStatus(state);
 
       expect(result).toEqual(false);
@@ -34,7 +34,7 @@ describe('Reducer: user-process selectors', () => {
   });
 
   describe('selector: selectUserAuthData', () => {
-    it('Should return user auth. data from state', () => {
+    it('should return user auth. data from state', () => {
       const result = selectUserAuthData(state);
 
       expect(result).toEqual(fakeUser);

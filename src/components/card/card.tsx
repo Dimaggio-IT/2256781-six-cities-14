@@ -67,6 +67,7 @@ function Card({
             height={cardHeight}
             alt={title}
             effect="blur"
+            data-testid="card-lazy-image"
           />
         </Link>
       </div>
@@ -75,7 +76,7 @@ function Card({
 
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
-          <div className="place-card__price">
+          <div className="place-card__price" data-testid="card-price-container">
             <b className="place-card__price-value">&euro;{price}</b>
             <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
@@ -89,11 +90,11 @@ function Card({
 
         <StarLine rating={rating} />
 
-        <h2 className="place-card__name">
+        <h2 className="place-card__name" data-testid="card-name-title">
           <Link to={path}>{title}</Link>
         </h2>
 
-        <p className="place-card__type">{offerType}</p>
+        <p className="place-card__type" data-testid="card-type-paragraph">{offerType}</p>
       </div>
     </article>
   );

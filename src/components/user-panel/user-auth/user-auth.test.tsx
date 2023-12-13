@@ -3,7 +3,7 @@ import { withHistory } from '../../../utils/mock-component';
 import { UserAuth } from './user-auth';
 
 describe('Component <UserAuth />:', () => {
-  it('Should render correct', () => {
+  it('should render correct', () => {
     const countFavorite = 3;
     const navContainerId = 'nav-container';
     const favoriteContainerId = 'count-favorites';

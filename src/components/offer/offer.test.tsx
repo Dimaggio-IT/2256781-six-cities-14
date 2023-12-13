@@ -9,7 +9,7 @@ import { Offer } from '..';
 import { withStoreAndHistory } from '../../utils/mock-component';
 
 describe('Component <Offer />:', () => {
-  it('Should render correctly. Do not show the <ReviewForm />, because by default the user has the status "Unknown"', () => {
+  it('should render correctly. Do not show the <ReviewForm />, because by default the user has the status "Unknown"', () => {
     const fakeOffer = makeFakeOffer();
     const commentsCount = 12;
     const fakeComments = makeFakeReviews({ length: commentsCount });
@@ -71,7 +71,7 @@ describe('Component <Offer />:', () => {
     expect(screen.queryByText(unexpectedFormTitleText)).not.toBeInTheDocument();
   });
 
-  it('Should render correctly. Show the <ReviewForm />, because the user has the status "Auth"', () => {
+  it('should render correctly. Show the <ReviewForm />, because the user has the status "Auth"', () => {
     const fakeOffer = makeFakeOffer();
     const commentsCount = 12;
     const fakeComments = makeFakeReviews({ length: commentsCount });
@@ -84,7 +84,7 @@ describe('Component <Offer />:', () => {
         offers={fakeOffersPreview}
         reviews={fakeComments}
         numberReviews={commentsCount}
-      />,
+      />
     );
 
     render(offerWrappedComponent);

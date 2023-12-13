@@ -22,7 +22,7 @@ describe('Reducer: favorite', () => {
     state = { ...initialState };
   });
 
-  it('Should return initial state with empty action', () => {
+  it('should return initial state with empty action', () => {
     const emptyAction = { type: '' };
     const expectedState: TFavoritesData = {
       favorites: [],
@@ -39,7 +39,7 @@ describe('Reducer: favorite', () => {
     expect(favoriteData.reducer(initialState, emptyAction)).toEqual(expectedState);
   });
 
-  it('Should return default initial state with empty action and undefined state', () => {
+  it('should return default initial state with empty action and undefined state', () => {
     const emptyAction = { type: '' };
     const expectedState: TFavoritesData = {
       favorites: [],

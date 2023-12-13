@@ -26,7 +26,7 @@ describe('Reducer: favorite selectors', () => {
   });
 
   describe('selector: selectFavorites', () => {
-    it('Should return "favorites" from state', () => {
+    it('should return "favorites" from state', () => {
       const result = selectFavorites(state);
 
       expect(result.length).toEqual(fakeOffersPreview.length);
@@ -34,7 +34,7 @@ describe('Reducer: favorite selectors', () => {
   });
 
   describe('selector: selectFavoritesCount', () => {
-    it('Should return "count" from state', () => {
+    it('should return "count" from state', () => {
       const result = selectFavoritesCount(state);
 
       expect(result).toEqual(fakeOffersPreview.length);
@@ -42,7 +42,7 @@ describe('Reducer: favorite selectors', () => {
   });
 
   describe('selector: selectCitiesFromFavoritesMemo', () => {
-    it('Should return "cities" from state "favorites"', () => {
+    it('should return "cities" from state "favorites"', () => {
       const favorites = selectFavorites(state);
       const cities = [...new Set(favorites.map((offer) => offer.city.name))];
 
@@ -53,7 +53,7 @@ describe('Reducer: favorite selectors', () => {
   });
 
   describe('selector: selectIsEmptyFavorites', () => {
-    it('Should return the empty or non-empty state "favorites"', () => {
+    it('should return the empty or non-empty state "favorites"', () => {
       const result = selectIsEmptyFavorites(state);
 
       expect(result).toEqual(!fakeOffersPreview.length);

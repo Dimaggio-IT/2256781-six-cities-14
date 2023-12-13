@@ -15,14 +15,14 @@ describe('Reducer: user-process', () => {
     state = { ...initialState };
   });
 
-  it('Should return initial state with empty action', () => {
+  it('should return initial state with empty action', () => {
     const emptyAction = { type: '' };
     const expectedState: TUserProcess = { ...initialState };
 
     expect(userProcess.reducer(initialState, emptyAction)).toEqual(expectedState);
   });
 
-  it('Should return default initial state with empty action and undefined state', () => {
+  it('should return default initial state with empty action and undefined state', () => {
     const emptyAction = { type: '' };
     const expectedState: TUserProcess = { ...initialState };
 

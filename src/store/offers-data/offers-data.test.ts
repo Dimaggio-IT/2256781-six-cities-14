@@ -14,21 +14,21 @@ describe('Reducer: offers-data', () => {
     state = { ...initialState };
   });
 
-  it('Should return initial state with empty action', () => {
+  it('should return initial state with empty action', () => {
     const emptyAction = { type: '' };
     const expectedState: TOffersData = { ...initialState };
 
     expect(offersData.reducer(initialState, emptyAction)).toEqual(expectedState);
   });
 
-  it('Should return default initial state with empty action and undefined state', () => {
+  it('should return default initial state with empty action and undefined state', () => {
     const emptyAction = { type: '' };
     const expectedState: TOffersData = { ...initialState };
 
     expect(offersData.reducer(undefined, emptyAction)).toEqual(expectedState);
   });
 
-  it('Should change offer with "updateOffers" action', () => {
+  it('should change offer with "updateOffers" action', () => {
     const fakeOfferPreview = makeFakeOfferPreview();
     const fakeOffersPreview = makeFakeOffersPreview();
     fakeOffersPreview[0].id = fakeOfferPreview.id;

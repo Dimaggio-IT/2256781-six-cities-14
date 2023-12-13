@@ -3,13 +3,13 @@ import { Premium } from '..';
 import { MarkType } from '../../const';
 
 describe('Component: <Premium />', () => {
-  it('Should render correctly', () => {
+  it('should render correctly', () => {
     render(<Premium isPremium mark={MarkType.Card} />);
 
     expect(screen.getByText('Premium')).toBeInTheDocument();
   });
 
-  it('Should render incorrectly', () => {
+  it('should render incorrectly', () => {
     const premiumContainerTestId = 'premium-container';
 
     render(<Premium isPremium={false} mark={MarkType.Card} />);
@@ -19,7 +19,7 @@ describe('Component: <Premium />', () => {
     expect(premiumContainer).toBeNull();
   });
 
-  it('Should contain the class Card', () => {
+  it('should contain the class Card', () => {
     const premiumContainerTestId = 'premium-container';
     const cardClass = 'place-card__mark';
 
@@ -30,7 +30,7 @@ describe('Component: <Premium />', () => {
     expect(premiumContainer).toHaveClass(cardClass);
   });
 
-  it('Should contain the class Offer', () => {
+  it('should contain the class Offer', () => {
     const premiumContainerTestId = 'premium-container';
     const offerClass = 'offer__mark';
 
