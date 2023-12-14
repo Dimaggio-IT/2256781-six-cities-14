@@ -3,7 +3,7 @@ import { Header } from '..';
 import { withStoreAndHistory } from '../../utils/mock-component';
 
 describe('Component: <Header />', () => {
-  it('should render correct', () => {
+  it('should render correctly', () => {
     const HEADER_TEST_ID = {
       CONTAINER: 'header-container',
       LOGO: 'header-link',

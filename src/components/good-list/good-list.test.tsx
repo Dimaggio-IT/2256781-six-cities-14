@@ -3,7 +3,7 @@ import { GoodList } from '..';
 import { makeFakeGoods } from '../../utils';
 
 describe('Component: <GoodList />', () => {
-  it('should render correct', () => {
+  it('should render correctly', () => {
     const goodContainerTestId = 'goods-container';
     const goodsListTestId = 'goods-list';
     const goodItemTestId = 'goods-item';

@@ -6,7 +6,7 @@ import { Sorting } from '..';
 import { TSorting } from '../../types';
 
 describe('Component <Sorting />:', () => {
-  it('should render correct', () => {
+  it('should render correctly', () => {
     const currentSorting: TSorting = 'POPULAR';
     const onSortChange = vi.fn();
     const expectedText = 'Top rated first';

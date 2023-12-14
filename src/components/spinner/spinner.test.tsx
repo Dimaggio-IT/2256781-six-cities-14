@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { Spinner } from './spinner';
 
 describe('Component <Spinner />:', () => {
-  it('should render correct', () => {
+  it('should render correctly', () => {
     const spinnerContainerId = 'spinner-container';
     const component = <Spinner />;
 

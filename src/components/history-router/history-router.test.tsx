@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import { HistoryRouter } from './history-router';
 
-describe('Component <HistoryRouter />', () => {
-  it('should render correct', () => {
+describe('Component <HistoryRouter />:', () => {
+  it('should render correctly', () => {
     const route = '/';
     const expectedText = /Test HistoryRouter/i;
     const testComponent = <div>Test HistoryRouter</div>;

@@ -4,7 +4,7 @@ import { withStoreAndHistory } from '../../../utils/mock-component';
 import { OfferList } from './offer-list';
 
 describe('Component <OffersList />:', () => {
-  it('should render correct', () => {
+  it('should render correctly', () => {
     const fakeOffersPreview = makeFakeOffersPreview();
     const expectedCount = fakeOffersPreview.length;
     const handleCardHover = vi.fn();

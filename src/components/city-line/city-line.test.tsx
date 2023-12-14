@@ -5,7 +5,7 @@ import { CityLine } from '..';
 import { withStoreAndHistory } from '../../utils/mock-component';
 
 describe('Component <CityLine />:', () => {
-  it('should render correct', () => {
+  it('should render correctly', () => {
     const cityListContainerId = 'tabs-container';
     const cityItemId = 'city-tab';
     const { withStoreComponent: wrappedComponent } = withStoreAndHistory(

@@ -4,7 +4,7 @@ import { makeFakeOfferPreview } from '../../utils/mock';
 import { withHistory } from '../../utils/mock-component';
 
 describe('Component <Map />:', () => {
-  it('should render correct', () => {
+  it('should render correctly', () => {
     const fakeOfferPreviewOne = makeFakeOfferPreview();
     const fakeOfferPreviewTwo = makeFakeOfferPreview();
     const fakeOffers = [fakeOfferPreviewOne, fakeOfferPreviewTwo];

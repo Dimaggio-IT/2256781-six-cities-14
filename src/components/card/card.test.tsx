@@ -5,7 +5,7 @@ import { makeFakeOfferPreview } from '../../utils';
 import { withStoreAndHistory } from '../../utils/mock-component';
 
 describe('Component: <Card />', () => {
-  it('should render correct', () => {
+  it('should render correctly', () => {
     const fakeOfferPreview = makeFakeOfferPreview();
     const EXPECTED_CARD_TEST_ID = {
       CONTAINER: 'card-container',

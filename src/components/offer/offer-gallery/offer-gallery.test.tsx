@@ -3,7 +3,7 @@ import { OfferGallery } from './offer-gallery';
 import { makeFakeOffer } from '../../../utils';
 
 describe('Component <OfferGallery />:', () => {
-  it('should render correct if no images are received', () => {
+  it('should render correctly if no images are received', () => {
     const fakeOffer = makeFakeOffer();
     fakeOffer.images = [];
     const galleryContainerTestId = 'gallery-container';
@@ -15,7 +15,7 @@ describe('Component <OfferGallery />:', () => {
     expect(expectedGalleryContainer).toBeInTheDocument();
   });
 
-  it('should render correct if images are received', () => {
+  it('should render correctly if images are received', () => {
     const fakeOffer = makeFakeOffer();
     const expectedImageCount = fakeOffer.images.length;
     const imageContainerTestId = 'offer-image-container';

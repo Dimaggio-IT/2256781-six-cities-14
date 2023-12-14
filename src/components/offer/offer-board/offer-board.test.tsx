@@ -4,8 +4,8 @@ import { OfferBoard } from './offer-board';
 import { TCityName } from '../../../types';
 import { withStoreAndHistory } from '../../../utils/mock-component';
 
-describe('Component: <OfferBoard />', () => {
-  it('should render correct', () => {
+describe('Component <OfferBoard />:', () => {
+  it('should render correctly', () => {
     const fakeOffersPreview = makeFakeOffersPreview();
     const offersPreviewCount = fakeOffersPreview.length;
     const handleCardHover = vi.fn();

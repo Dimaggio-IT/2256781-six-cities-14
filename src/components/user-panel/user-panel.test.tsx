@@ -7,7 +7,7 @@ import { AuthorizationStatus, NameSpace } from '../../const';
 describe('Component <UserPanel />', () => {
   const userPanelWithHistory = withHistory(<UserPanel />);
 
-  it('should render correct when the user is not authorized', () => {
+  it('should render correctly when the user is not authorized', () => {
     const initialState = makeFakeState();
     const { withStoreComponent } = withStore(
       userPanelWithHistory,
@@ -21,7 +21,7 @@ describe('Component <UserPanel />', () => {
     expect(sighInText).toBeInTheDocument();
   });
 
-  it('should render correct when the user is authorized', () => {
+  it('should render correctly when the user is authorized', () => {
     const fakeUser = makeFakeUserData();
     const initialMockState = makeFakeState({
       [NameSpace.User]: {
