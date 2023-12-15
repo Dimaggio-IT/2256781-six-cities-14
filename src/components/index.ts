@@ -17,7 +17,6 @@ export * from './nearby/nearby';
 export * from './map/map';
 export * from './offer/offer';
 export * from './offer/offer-board/offer-board';
-export * from './rating-form/rating-form';
 export * from './premium/premium';
 export * from './review-item/review-item';
 export * from './sorting/sorting';

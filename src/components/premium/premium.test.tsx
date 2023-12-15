@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { Premium } from '..';
 import { MarkType } from '../../const';
 
-describe('Component: <Premium />', () => {
+describe('Component <Premium />:', () => {
   it('should render correctly', () => {
     render(<Premium isPremium mark={MarkType.Card} />);
 
