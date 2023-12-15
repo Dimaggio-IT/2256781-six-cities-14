@@ -20,10 +20,10 @@ function Review({
     <section className="offer__reviews reviews" data-testid="comments-container">
       <h2 className="reviews__title">
         Reviews &middot;{' '}
-        <span className="reviews__amount">{numberReviews}</span>
+        <span className="reviews__amount" data-testid="review-amount">{numberReviews}</span>
       </h2>
 
-      <ul className="reviews__list">
+      <ul className="reviews__list" data-testid="review-list-container">
         {reviews.map((review) => (
           <ReviewItem key={review.id} review={review} />
         ))}
