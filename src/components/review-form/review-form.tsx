@@ -119,6 +119,7 @@ function ReviewForm({ offerId }: TReviewFormProps): JSX.Element {
                 name="rating"
                 value={score}
                 id={`${score}-stars`}
+                data-testid={`rating-form-item-${score}`}
                 type="radio"
                 checked={rating === score}
                 disabled={isLoading}
@@ -154,6 +155,7 @@ function ReviewForm({ offerId }: TReviewFormProps): JSX.Element {
         <button
           className="reviews__submit form__submit button"
           type="submit"
+          data-testid="submit-button"
           disabled={!isCorrectUserInput || isLoading}
         >
           {isLoading ? 'Sending...' : 'Submit'}
