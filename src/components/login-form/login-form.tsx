@@ -52,10 +52,11 @@ function LoginForm(): JSX.Element {
 
   return (
     <section className="login">
-      <h1 className="login__title">Sign in</h1>
+      <h1 className="login__title" data-testid="login-title">Sign in</h1>
       <form
         onSubmit={handleFormSubmit}
         className="login__form form"
+        data-testid="login-form"
         action="#"
         method="post"
       >
@@ -89,6 +90,7 @@ function LoginForm(): JSX.Element {
         </div>
         <button
           className="login__submit form__submit button"
+          data-testid="login-button-submit"
           type="submit"
           disabled={!isSubmitButtonOk}
         >

@@ -45,7 +45,7 @@ function MainPage(): JSX.Element {
   const handleCardLeave = useCallback(() => setActiveCard(null), []);
 
   return (
-    <div className="page page--gray page--main">
+    <div className="page page--gray page--main" data-testid="main-page">
       <Helmet>
         <title>6 Cities - Main page</title>
       </Helmet>

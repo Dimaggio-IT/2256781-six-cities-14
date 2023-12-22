@@ -25,7 +25,7 @@ function LoginPage(): JSX.Element {
   }, [authStatus, navigate]);
 
   return (
-    <div className="page page--gray page--login">
+    <div className="page page--gray page--login" data-testid="page-login">
       <Helmet>
         <title>6 Cities - Login page</title>
       </Helmet>
@@ -33,16 +33,17 @@ function LoginPage(): JSX.Element {
       <Header />
 
       <main className="page__main page__main--login">
-        <div className="page__login-container container">
+        <div className="page__login-container container" data-testid="page-login-container">
           <LoginForm />
           <section className="locations locations--login locations--current">
-            <div className="locations__item">
+            <div className="locations__item" data-testid="location-item">
               <button
                 type="button"
                 className="locations__item-link"
+                data-testid="location-button"
                 onClick={handleSetRandomCity}
               >
-                <span>{randomCity}</span>
+                <span data-testid="location-city">{randomCity}</span>
               </button>
             </div>
           </section>
