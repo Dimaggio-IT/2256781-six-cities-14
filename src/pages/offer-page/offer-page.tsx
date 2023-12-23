@@ -76,7 +76,7 @@ function OfferPage(): JSX.Element {
 
       <Header />
 
-      <main className="page__main page__main--offer">
+      <main className="page__main page__main--offer" data-testid="offer-page-container">
         <Offer
           offers={offersOnMap}
           offer={currentOffer}
@@ -84,7 +84,7 @@ function OfferPage(): JSX.Element {
           reviews={reviews}
           numberReviews={numberReviews}
         />
-        <div className="container">
+        <div className="container" data-testid="nearby-page-container">
           <Nearby offers={nearbyPlaces} />
         </div>
       </main>
